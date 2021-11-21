@@ -1,4 +1,6 @@
-.container{ width: 50%; margin-bottom: 0.2em; padding: 0.2em; }
+.container{ padding: 0.2em; }
+.container.grid{ width: 50%; }
+.container.list{ width: 100%; }
 
 .video{ display: flex; align-items: center; border-radius: 1px solid lightgray; box-shadow: 3px 3px 5px 0px rgba(191, 191, 191, 0.53); transition: transform 250ms ease-in; cursor: pointer; }
 
@@ -11,3 +13,4 @@
 .title, .channel{ font-size: 0.8rem; margin: 0; }
 
 .channal{ font-size: 0.6rem; }
+

@@ -1,23 +1,24 @@
-import React, { useRef } from 'react';
+import React, { useRef, memo } from 'react';
 import styles from './SearchHeader.module.css'
 
-const SearchHeader = ({ onSearch }) => {
-    const inputRef = useRef();
+const SearchHeader = memo(
+    ({ onSearch }) => {
+        const inputRef = useRef();
 
-    const handleSearch = () => {
-        const value = inputRef.current.value;
-        onSearch(value);
-    }
-
-    const onClick = () => {
-        handleSearch();
-    };
-
-    const onKeyPress = (event) => {
-        if(event.key === 'Enter'){
-            handleSearch();
+        const handleSearch = () => {
+            const value = inputRef.current.value;
+            onSearch(value);
         }
-    };
+
+        const onClick = () => {
+            handleSearch();
+        };
+
+        const onKeyPress = (event) => {
+            if(event.key === 'Enter'){
+                handleSearch();
+            }
+        };
 
         return (
             <header className={styles.header}>
@@ -31,6 +32,6 @@ const SearchHeader = ({ onSearch }) => {
                 </button>
             </header>
         )
-        };
-
+    }
+);
 export default SearchHeader;

@@ -1,1 +1,11 @@
 .app{ max-width: 80rem; }
+
+.content{ display: flex; }
+
+.detail{ flex: 1 1 70%; }
+
+.list{ flex: 1 1 30%; }
+
+@media(max-width: 1100px) {
+    .content{ flex-direction: column; }
+}
